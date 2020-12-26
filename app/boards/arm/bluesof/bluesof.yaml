@@ -7,13 +7,25 @@ toolchain:
   - gnuarmemb
   - xtools
 supported:
-  - gpio
-  - i2c
-  - counter
-  - spi
+  - adc
   - usb_device
-  - lsm303dlhc
-  - nvs
-  - can
-  - kscan
   - ble
+  - ieee802154
+  - pwm
+  - watchdog
+
+  # - gpio
+  # - i2c
+  # - counter
+  # - spi
+  # - usb_device
+  # - lsm303dlhc
+  # - nvs
+  # - can
+  # - kscan
+  # - ble
+  # - adc
+  # - ieee802154
+  # - pwm
+  # - watchdog
+

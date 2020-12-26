@@ -6,7 +6,7 @@
 
 #include <zephyr.h>
 #include <device.h>
-// #include <drivers/sensor.h>
+#include <drivers/sensor.h>
 #include <sys/printk.h>
 // #include <drivers/sensor/max17055>
 
