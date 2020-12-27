@@ -24,20 +24,8 @@ config BOARD
 config ZMK_SPLIT
 	default y
 
-config I2C
-	bool
-	default y
-
 menuconfig SENSOR
     bool "Sensor Drivers"
-
-#onfig MAX17055
-#    bool "MAX17055 Fuel Gauge"
-#    depends on I2C && SENSOR
-
-#config SPI
-#    bool
-#    default y
 
 config BT_CTLR
 	default BT
@@ -48,8 +36,8 @@ config ZMK_BLE
 config ZMK_USB
 	default y
 
-#config ZMK_BATTERY_VOLTAGE_DIVIDER  # is this correct?
-#	default n
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+	default y
 
 if USB
 
@@ -61,38 +49,9 @@ config USB_DEVICE_STACK
 
 endif # USB
 
-#if ZMK_DISPLAY
-
-#config SPI
-#	default y
-
-#config IL0323
-#	default y
-
-#endif # ZMK_DISPLAY
-
-#if LVGL
-
-#config LVGL_HOR_RES_MAX
-#	default 80
-
-#config LVGL_VER_RES_MAX
-#	default 128
-
-#config LVGL_VDB_SIZE
-#	default 100
-
-#config LVGL_DPI
-#	default 145
-
-#config LVGL_BITS_PER_PIXEL
-#	default 1
-
-#choice LVGL_COLOR_DEPTH
-#	default LVGL_COLOR_DEPTH_1
-#endchoice
-
-#endif # LVGL
+config BOARD_ENABLE_DCDC
+	bool "Enable DCDC mode"
+	select SOC_DCDC_NRF52X
+	default y
 
 endif # BOARD_BLUESOF_LEFT || BOARD_BLUESOF_RIGHT
-
