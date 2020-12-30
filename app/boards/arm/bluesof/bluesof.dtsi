@@ -43,7 +43,6 @@
 		>;
 	};
 
-// TODO TODO TODO - check to see if this should go in left and right dts files instead
 	vbatt {
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
