@@ -80,10 +80,10 @@
 	};
 */
 	vbatt {
-		compatible = "zmk,battery-voltage-divider";  // is this needed?
+		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
 		io-channels = <&adc 5>;
-		output-ohms = <2000000>;              // do these values need to be change? 
+		output-ohms = <2000000>;
 		full-ohms = <(2000000 + 820000)>;
 	};
 	
@@ -109,6 +109,10 @@
 &usbd {
 	status = "okay";
 };
+
+// &left_encoder {
+//     status = "okay";
+// };
 
 &uart0 {
 	compatible = "nordic,nrf-uarte";

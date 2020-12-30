@@ -25,8 +25,10 @@
    &kp C_VOL_UP &kp Z     &kp X     &kp C     &kp V     &kp B      &kp N     &kp M      &kp CMMA   &kp DOT     &kp FSLH   &kp RSFT
    &kp C_VOL_DN  &kp LGUI  &mo 1     &kp SPC   &kp SPC   &kp SPC    &kp RET   &mo 2      &kp RALT   &kp SPC     &kp SPC    &kp SPC
                         >;
-                        // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
+                
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
