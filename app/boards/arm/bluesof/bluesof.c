@@ -8,7 +8,6 @@
 #include <device.h>
 #include <drivers/sensor.h>
 #include <sys/printk.h>
-// #include <drivers/sensor/max17055>
 
 /* Current cell voltage in units of 1.25/16mV */
 uint16_t voltage;
