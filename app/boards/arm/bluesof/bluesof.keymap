@@ -32,12 +32,12 @@
    &kp TAB    &kp Q     &kp W     &kp F     &kp P     &kp G           &kp J     &kp L      &kp U      &kp Y       &kp SINGLE_QUOTE &kp MINUS
    &kp LCTL   &kp A     &kp R     &kp S     &kp T     &kp D           &kp H     &kp N      &kp E      &kp I       &kp O   &kp COLON
    &kp LSFT   &kp Z     &kp X     &kp C     &kp V     &kp B           &kp K     &kp M      &kp CMMA   &kp DOT     &kp FSLH   &kp BSLH
-              &kp CARET &kp LALT  &kp LGUI  &mo LWR   &kp RET         &kp SPC   &mo RSE    &kp RGUI   &kp RALT    &kp CARET    
+                                  &kp LGUI  &mo LWR   &kp RET         &kp SPC   &mo RSE    &kp RGUI    
    &kp C_MUTE                                                                                                              &kp SPC
                         >;
 
 			// sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
                 };
                 
                 lower_layer {
@@ -52,12 +52,12 @@
    &kp LG(TAB)   &trans       &trans       &trans       &trans           &trans            &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
    &kp LG(LS(Z)) &kp LG(Z)    &kp LG(X)    &kp LG(C)    &kp LG(V)        &trans            &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans    &trans
    &kp LSHFT     &trans       &trans       &trans       &trans           &trans            &trans    &trans    &trans    &trans    &trans    &trans
-                 &reset       &bootloader  &trans       &trans           &kp DEL           &kp BKSP  &trans    &trans    &to COLE  &to QWRT   
+                                           &reset       &bootloader      &kp DEL           &kp BKSP  &to COLE  &to QWRT   
    &trans                                                                                                                             &trans
                         >;
                    	
                         // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
                 };
 
                 raise_layer {
@@ -72,34 +72,34 @@
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &trans    &trans    &trans    &trans    &trans    &trans
    &trans     &trans       &trans       &kp C_AC_COPY &kp C_AC_PASTE &trans            &trans    &trans    &trans    &trans    &trans    &trans
    &trans     &trans       &trans       &trans       &trans       &trans               &trans    &trans    &trans    &trans    &trans    &trans
-              &reset       &bootloader  &trans      &trans       &kp LG(RET)           &trans    &trans    &trans    &trans    &trans    
+                                        &reset       &bootloader  &kp LG(RET)           &trans    &trans    &trans   
    &trans                                                                                                                             &trans
                         >;
                    	
                         // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
                 };
 
-                qwerty_layer {
-// -----------------------------------------------------------------------------------------
-// |  GRAV|  1  |  2  |  3  |  4  |  5  |      |  6  |  7  |  8   |  9  |  O  | BKSP |
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |      |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M   |  ,  |  .  |  /  | SHFT |
-//        |  ^  | ALT | GUI | LWR | SPC |      | ENT | RSE  | GUI | ALT |  ^  |
-// | LEFT ENCODER |                                                  | RIGHT ENCODER |
+//                 qwerty_layer {
+// // -----------------------------------------------------------------------------------------
+// // |  GRAV|  1  |  2  |  3  |  4  |  5  |      |  6  |  7  |  8   |  9  |  O  | BKSP |
+// // |  TAB |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// // | CTRL |  A  |  S  |  D  |  F  |  G  |      |  H  |  J   |  K  |  L  |  ;  |  '   |
+// // | SHFT |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M   |  ,  |  .  |  /  | SHFT |
+// //        |  ^  | ALT | GUI | LWR | SPC |      | ENT | RSE  | GUI | ALT |  ^  |
+// // | LEFT ENCODER |                                                  | RIGHT ENCODER |
 
-                        bindings = <
-   &kp GRAV &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5       &kp NUM_6 &kp NUM_7  &kp NUM_8  &kp NUM_9   &kp NUM_0  &kp BKSP
-   &kp TAB  &kp Q     &kp W     &kp E     &kp R     &kp T           &kp Y     &kp U      &kp I      &kp O       &kp P      &kp BKSP
-   &kp LCTL &kp A     &kp S     &kp D     &kp F     &kp G           &kp H     &kp J      &kp K      &kp L       &kp SCLN   &kp QUOT
-   &kp LSFT &kp Z     &kp X     &kp C     &kp V     &kp B           &kp N     &kp M      &kp CMMA   &kp DOT     &kp FSLH   &kp RSFT
-            &kp CARET &kp LALT  &kp LGUI  &mo LWR   &kp RET         &kp SPC   &mo RSE    &kp RGUI   &kp RALT    &kp CARET    
-   &kp C_MUTE                                                                                                                  &kp SPC
-                        >;
+//                         bindings = <
+//    &kp GRAV &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5       &kp NUM_6 &kp NUM_7  &kp NUM_8  &kp NUM_9   &kp NUM_0  &kp BKSP
+//    &kp TAB  &kp Q     &kp W     &kp E     &kp R     &kp T           &kp Y     &kp U      &kp I      &kp O       &kp P      &kp BKSP
+//    &kp LCTL &kp A     &kp S     &kp D     &kp F     &kp G           &kp H     &kp J      &kp K      &kp L       &kp SCLN   &kp QUOT
+//    &kp LSFT &kp Z     &kp X     &kp C     &kp V     &kp B           &kp N     &kp M      &kp CMMA   &kp DOT     &kp FSLH   &kp RSFT
+//             &kp CARET &kp LALT  &kp LGUI  &mo LWR   &kp RET         &kp SPC   &mo RSE    &kp RGUI   &kp RALT    &kp CARET    
+//    &kp C_MUTE                                                                                                                  &kp SPC
+//                         >;
 
-			// sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
+// 			// sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+// 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+//                 };
         };
 };
