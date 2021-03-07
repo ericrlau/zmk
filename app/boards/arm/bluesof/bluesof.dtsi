@@ -63,7 +63,7 @@
 		label = "LEFT_ENCODER";
         a-gpios = <&gpio0  15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0  17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		resolution = <1>;
+		resolution = <2>;
 	};
 
 	sensors {
@@ -74,7 +74,8 @@
 	vbatt {
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
-		io-channels = <&adc 1>;
+		io-channels = <&adc 1>; // change this back once next rev boards come in
+		// io-channels = <&adc 3>;
 		output-ohms = <2000000>;
 		full-ohms = <(2000000 + 820000)>;
 	};
