@@ -1,28 +1,21 @@
 # Copyright (c) 2020 Eric Lau
 # SPDX-License-Identifier: MIT
 
-if BOARD_BLUESOF_LEFT
+if BOARD_SF65
 
 	config ZMK_KEYBOARD_NAME
-	default "BlueSof"
+	default "SF56"
 
-endif # BOARD_BLUESOF_LEFT
-
-if BOARD_BLUESOF_RIGHT
-
-	config ZMK_KEYBOARD_NAME
-	default "BlueSof (right)"
-
-endif # BOARD_BLUESOF_RIGHT
+endif # BOARD_SF65
 
 
-if BOARD_BLUESOF_LEFT || BOARD_BLUESOF_RIGHT
+if BOARD_SF65
 
 config BOARD
-	default "bluesof"
+	default "sf65"
 
-config ZMK_SPLIT
-	default y
+# config ZMK_SPLIT
+# 	default y
 
 menuconfig SENSOR
     bool "Sensor Drivers"
@@ -49,4 +42,4 @@ config USB_DEVICE_STACK
 
 endif # USB
 
-endif # BOARD_BLUESOF_LEFT || BOARD_BLUESOF_RIGHT
+endif # BOARD_SP56_LEFT || BOARD_SP56_RIGHT

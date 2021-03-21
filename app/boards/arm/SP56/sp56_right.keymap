@@ -4,4 +4,4 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "bluesof.keymap"
+#include "sp56.keymap"
